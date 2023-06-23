@@ -1,0 +1,29 @@
+function power = arnold_02(photo,A)
+value=0;
+while value ~= 1 && value ~=  2
+    value = input('Introduce 1 para desordenar hasta encontrar el original o 2 para desordenar hasta un número concreto de veces: ');
+end
+imgArray = [];
+if value == 1
+ n = power_a(A);
+end
+
+if value == 2
+    nTrans = 0;
+   while nTrans < 1
+   nTrans = input('Introduce un número entero: ');
+   end 
+    photoIt = imread(photo);
+    imgArray(1) = photoIt;
+    index = 2;
+   for i=1:nTrans
+       
+       pixel_disorder(photoIt,A);
+       photoIt = getappdata(gcf,"photoMod");
+       imgArray(index) = photoIt;
+       index = index + 1;
+
+   end
+end
+montage(imgArray);
+end

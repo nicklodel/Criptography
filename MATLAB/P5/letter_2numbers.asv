@@ -1,0 +1,19 @@
+function double = letter_2numbers(text)
+abc='abcdefghijklmnnopqrstuvwxyz';
+abc(15)=char(241);
+text=lower(text);
+n=length(abc);
+m=length(text);
+v=[];
+for i=1:m 
+    for j=1:n
+        if text(i) == abc(j)
+            if i < 10
+            v= '0' + [v j-1];
+            
+            end
+            break;
+        end
+    end
+end
+end

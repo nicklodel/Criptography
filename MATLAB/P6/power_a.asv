@@ -1,0 +1,10 @@
+function power_a(A,m)
+[a,c] = size(a)
+if det(A) == 0 || a ~= c || a ~= 2 || ~isinteger(m)
+error('Error de argumentos');
+end
+contador = 0;
+Aiter = A;
+while Aiter(1,1) ~= 1 && Aiter(2,2) ~= 1
+   
+end
